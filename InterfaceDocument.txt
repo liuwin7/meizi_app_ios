@@ -1,0 +1,118 @@
+
+// 该文档适用于现有的对豆瓣妹子的后台server
+
+1、获取图片的类型/types
+【参数】
+无
+【请求方式】
+POST/GET
+【返回】
+json格式
+【样例】
+{
+    "code": 0,
+    "types": [
+        "gif",
+        "meitui",
+        "meitun",
+        "meixiong",
+        "qingxin"
+    ],
+    "desc": "Success"
+}
+【错误类型】
+无
+
+2、根据图片的类型，获取该类型下的所有图片索引 /beauties
+【参数】
+json格式
+type: 由接口1查询到的参数
+user_uuid: 登录后的ID
+【请求参数样例】
+{"type":"gif","user_uuid":"b22ba27a-eb1c-11e5-b3dc-0c4de9c7c925"}
+【请求方式】
+POST
+【返回】
+json格式
+【样例】
+{
+    "code": 0,
+    "beauties": [
+        {
+            "favorited": 0,
+            "name": "【爆照】我没什么好晒的",
+            "image_id": 2,
+            "url": "http://www.doubanmeizi.com/wp-content/uploads/2014/08/s_p18266961.jpg",
+            "type": "gif",
+            "width": 300,
+            "height": 399
+        },,,
+    ],
+    "desc": "Success"
+}
+【错误类型】（参看附录了解错误格式说明）
+421，请求的类型无效
+
+
+3、注册 /register
+【参数】
+json格式
+username: 用户名
+nickname: 昵称
+password: 密码
+【请求参数样例】
+{"username":"tom","password":"123456","nickname":"dog"}
+【请求方式】
+POST
+【返回】
+json格式
+【样例】
+{
+    "code": 0,
+    "user_id": "b22ba27a-eb1c-11e5-b3dc-0c4de9c7c925",
+    "desc": "Success"
+}
+【错误类型】（参看附录了解错误格式说明）
+431，无效的用户名
+432，用户名已经被使用
+433，密码无效
+
+4、登录 /login
+【参数】
+json格式
+username: 用户名
+password: 密码
+【请求参数样例】
+{"username":"tom","password":"123456"}
+【请求方式】
+POST
+【返回】
+json格式
+【样例】
+{
+    "user_info": {
+        "user_name": "tom",
+        "user_uuid": "2a78412b-eaa7-11e5-8a03-0c4de9c7c925",
+        "user_nickname": "dog"
+    },
+    "code": 0,
+    "desc": "Success"
+}
+【错误类型】（参看附录了解错误格式说明）
+441，用户名或密码不正确
+
+
+5、点赞
+
+
+
+【附录一】
+code说明
+0：成功
+非0：错误
+错误的类型由三位数字组成
+XYZ
+X：固定的数字4，表示这是一个错误代码
+Y：接口的顺序，该顺序以该文档的描述为准
+Z：错误的原因
+
