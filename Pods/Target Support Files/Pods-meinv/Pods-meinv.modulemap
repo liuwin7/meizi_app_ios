@@ -1,0 +1,6 @@
+framework module Pods_meinv {
+  umbrella header "Pods-meinv-umbrella.h"
+
+  export *
+  module * { export * }
+}

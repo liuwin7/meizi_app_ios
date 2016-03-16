@@ -1,0 +1,25 @@
+/* 
+  localizable.strings
+  meinv
+
+  Created by tropsci on 16/3/14.
+  Copyright © 2016年 topsci. All rights reserved.
+*/
+
+// ImageType
+
+"Change Theme"="更换主题";
+
+"gif"="GIF";
+"meitui"="美腿";
+"meitun"="美臀";
+"meixiong"="美胸";
+"qingxin"="清新";
+
+"Cancel"="取消";
+
+"Network Error"="网络错误";
+"Please Waitting..."="请稍后...";
+
+"Alert"="提示";
+"OK"="确定";

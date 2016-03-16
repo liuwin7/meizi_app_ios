@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7hv-D0-sTM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Center View Controller-->
+        <scene sceneID="Za0-ym-jTq">
+            <objects>
+                <viewController id="7hv-D0-sTM" customClass="CenterViewController" customModule="meinv" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EZd-sY-r9m"/>
+                        <viewControllerLayoutGuide type="bottom" id="ghS-Ey-Wzt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y0y-rr-7C6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="RPE-dB-985" appends="YES" id="P1m-s8-1Iq"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="centerTapGest" destination="RPE-dB-985" id="aSm-da-g5I"/>
+                        <outlet property="rootViewController" destination="PxV-dX-NLG" id="VF7-zs-x7Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhN-kP-kMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="PxV-dX-NLG" customClass="BeautyNavigationViewController" customModule="meinv" customModuleProvider="target"/>
+                <tapGestureRecognizer id="RPE-dB-985">
+                    <connections>
+                        <action selector="tapRootViewControllerAction:" destination="7hv-D0-sTM" id="RdH-Kp-TWz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="198" y="524"/>
+        </scene>
+    </scenes>
+</document>

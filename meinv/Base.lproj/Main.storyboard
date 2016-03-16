@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2Dm-lG-W7w">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--login-->
+        <scene sceneID="TxI-B0-lMB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="login" id="XaX-d0-P6X" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFW-Px-QvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="184"/>
+        </scene>
+        <!--Beauties Table View Controller-->
+        <scene sceneID="KLX-3v-haR">
+            <objects>
+                <tableViewController storyboardIdentifier="beautiesTableViewControllerID" id="OLv-CU-rUO" customClass="BeautiesTableViewController" customModule="meinv" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="236" sectionHeaderHeight="28" sectionFooterHeight="28" id="fpB-kk-8I9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="beauty_cell_id" rowHeight="236" id="ivl-3X-6w0" customClass="BeautyTableViewCell" customModule="meinv" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="236"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ivl-3X-6w0" id="lTQ-bs-Ymv">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="235"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAd-OO-TAI">
+                                            <rect key="frame" x="8" y="8" width="584" height="191"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4e-EF-YY0">
+                                            <rect key="frame" x="8" y="155" width="584" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="lle-dv-ksc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIm-e6-9QT">
+                                            <rect key="frame" x="8" y="207" width="57" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1i-uq-VGR">
+                                            <rect key="frame" x="571" y="207" width="21" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="21" id="JdN-S1-S72"/>
+                                                <constraint firstAttribute="height" constant="21" id="cod-LZ-ePo"/>
+                                            </constraints>
+                                            <state key="normal" image="gray_heart"/>
+                                            <state key="selected" image="red_heart"/>
+                                            <connections>
+                                                <action selector="favoriteAction:" destination="ivl-3X-6w0" eventType="touchUpInside" id="Bbq-oB-jTl"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="n4e-EF-YY0" secondAttribute="trailing" id="5bb-JQ-QBv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="n4e-EF-YY0" secondAttribute="bottom" id="Cuz-hF-wDG"/>
+                                        <constraint firstItem="dAd-OO-TAI" firstAttribute="top" secondItem="lTQ-bs-Ymv" secondAttribute="topMargin" id="Lnl-4J-whS"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="eIm-e6-9QT" secondAttribute="leading" id="Ouh-21-OYF"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="n4e-EF-YY0" secondAttribute="leading" id="PXd-4c-Pg5"/>
+                                        <constraint firstItem="dAd-OO-TAI" firstAttribute="trailing" secondItem="lTQ-bs-Ymv" secondAttribute="trailingMargin" id="WDw-1M-kZf"/>
+                                        <constraint firstItem="dAd-OO-TAI" firstAttribute="bottom" secondItem="lTQ-bs-Ymv" secondAttribute="bottomMargin" id="ZB5-qH-nnN"/>
+                                        <constraint firstItem="C1i-uq-VGR" firstAttribute="centerY" secondItem="eIm-e6-9QT" secondAttribute="centerY" id="Zhj-cm-wuE"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="C1i-uq-VGR" secondAttribute="trailing" id="b3p-v9-CRm"/>
+                                        <constraint firstItem="n4e-EF-YY0" firstAttribute="bottom" secondItem="dAd-OO-TAI" secondAttribute="bottom" id="cUg-Jx-8no"/>
+                                        <constraint firstItem="eIm-e6-9QT" firstAttribute="top" secondItem="dAd-OO-TAI" secondAttribute="bottom" constant="8" id="exh-7y-GOh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="eIm-e6-9QT" secondAttribute="bottom" constant="-1" id="feY-ed-98S"/>
+                                        <constraint firstItem="dAd-OO-TAI" firstAttribute="leading" secondItem="lTQ-bs-Ymv" secondAttribute="leadingMargin" id="ye0-k0-3wx"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="ZB5-qH-nnN"/>
+                                            <exclude reference="Cuz-hF-wDG"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="beautyImageView" destination="dAd-OO-TAI" id="Hjx-uh-aLR"/>
+                                    <outlet property="favoriteButton" destination="C1i-uq-VGR" id="KQ2-yD-LBV"/>
+                                    <outlet property="titleLabel" destination="n4e-EF-YY0" id="ONM-ON-rD5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OLv-CU-rUO" id="XBB-7Y-pcS"/>
+                            <outlet property="delegate" destination="OLv-CU-rUO" id="lx8-30-lqJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="O63-5c-BdW">
+                        <barButtonItem key="leftBarButtonItem" title="我" id="XBe-pz-DhJ">
+                            <connections>
+                                <action selector="showMeAction:" destination="OLv-CU-rUO" id="nSd-gP-pEz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="主题" id="Dky-IK-Suk">
+                            <connections>
+                                <action selector="changeTheme:" destination="OLv-CU-rUO" id="70q-DH-ma6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="meBarButtonItem" destination="XBe-pz-DhJ" id="R70-Ua-hm2"/>
+                        <segue destination="XaX-d0-P6X" kind="presentation" identifier="show_login_segue_id" id="SSy-5Y-EJo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHQ-5g-qqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="654"/>
+        </scene>
+        <!--Beauty Navigation View Controller-->
+        <scene sceneID="Ux8-7G-4Zt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Dm-lG-W7w" customClass="BeautyNavigationViewController" customModule="meinv" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xb2-Le-Gal">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OLv-CU-rUO" kind="relationship" relationship="rootViewController" id="2es-wu-QGJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vas-YV-ccf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-139" y="654"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gray_heart" width="21" height="21"/>
+        <image name="red_heart" width="21" height="21"/>
+    </resources>
+</document>
