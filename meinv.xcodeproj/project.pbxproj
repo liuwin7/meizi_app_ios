@@ -27,6 +27,7 @@
 		A957A85D1C993A9500E011FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A957A85C1C993A9500E011FD /* LoginViewController.swift */; };
 		A957A85F1C993AA100E011FD /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A957A85E1C993AA100E011FD /* login.storyboard */; };
 		A957A8611C9951CC00E011FD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A957A8601C9951CC00E011FD /* RegisterViewController.swift */; };
+		A957A8631C9A3FE600E011FD /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A957A8621C9A3FE600E011FD /* GlobalConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A957A85C1C993A9500E011FD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A957A85E1C993AA100E011FD /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		A957A8601C9951CC00E011FD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A957A8621C9A3FE600E011FD /* GlobalConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			children = (
 				A957A8501C97E01500E011FD /* UIViewFrameExtension.swift */,
 				A957A8591C992CBD00E011FD /* CustomUserDefaults.swift */,
+				A957A8621C9A3FE600E011FD /* GlobalConstant.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				A957A8511C97E01500E011FD /* UIViewFrameExtension.swift in Sources */,
 				A957A85A1C992CBD00E011FD /* CustomUserDefaults.swift in Sources */,
 				A93EE5A41C968DA600E5ED60 /* AppDelegate.swift in Sources */,
+				A957A8631C9A3FE600E011FD /* GlobalConstant.swift in Sources */,
 				A957A84E1C97D81D00E011FD /* MeTableViewController.swift in Sources */,
 				A957A8491C97D79700E011FD /* BeautyTableViewCell.swift in Sources */,
 				A957A8481C97D79700E011FD /* BeautyModel.swift in Sources */,

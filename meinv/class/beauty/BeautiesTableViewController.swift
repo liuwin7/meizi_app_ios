@@ -35,7 +35,7 @@ class BeautiesTableViewController: UITableViewController {
             if let uuid = NSUserDefaults.standardUserDefaults().userUUID {
                 parameters["user_uuid"] = uuid
             }
-            request = self.manager.request(.POST, "http://192.168.7.14:5000/beauties", parameters:parameters , encoding: .JSON).responseJSON { (response) -> Void in
+            request = self.manager.request(.POST, GlobalConstant.kAPI_Beauties, parameters:parameters , encoding: .JSON).responseJSON { (response) -> Void in
                 guard let value = response.result.value else {
                     self.hud?.mode = .Text
                     self.hud?.labelText = NSLocalizedString("Network Error", comment: "Network Error")
@@ -100,7 +100,7 @@ class BeautiesTableViewController: UITableViewController {
         
         self.hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         
-        self.request = self.manager.request(.POST, "http://192.168.7.14:5000/types", parameters:nil , encoding: .JSON).responseJSON { (response) -> Void in
+        self.request = self.manager.request(.POST, GlobalConstant.kAPI_Types, parameters:nil , encoding: .JSON).responseJSON { (response) -> Void in
             guard let value = response.result.value else {
                 self.hud?.mode = .Text
                 self.hud?.labelText = NSLocalizedString("Network Error", comment: "Network Error")
@@ -286,7 +286,7 @@ extension BeautiesTableViewController : BeautyTableViewCellProtocol {
             alertController.addAction(alertAction)
         }
         let params:[String: String] = ["user_uuid": user_uuid, "beauty_uuid": "\(beauty.beautyID)"]
-        request = self.manager.request(.POST, "http://192.168.7.14:5000/favorite", parameters: params, encoding: .JSON).responseJSON( completionHandler: { (response) -> Void in
+        request = self.manager.request(.POST, GlobalConstant.kAPI_Favorite, parameters: params, encoding: .JSON).responseJSON( completionHandler: { (response) -> Void in
             guard let value = response.result.value else {
                 self.request = nil
                 return

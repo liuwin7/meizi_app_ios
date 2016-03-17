@@ -80,7 +80,7 @@ class RegisterViewController: UIViewController {
         let hud = MBProgressHUD.showHUDAddedTo(view , animated: true)
         hud.mode = .Text
         hud.labelText = "正在注册"
-        self.manager.request(.POST, "http://192.168.7.14:5000/register", parameters: parameters, encoding: .JSON).responseJSON { (response) -> Void in
+        self.manager.request(.POST, GlobalConstant.kAPI_Register, parameters: parameters, encoding: .JSON).responseJSON { (response) -> Void in
             guard let value = response.result.value else {
                 hud.labelText = NSLocalizedString("Network Error", comment: "Network Error")
                 hud.hide(true, afterDelay: 0.5)

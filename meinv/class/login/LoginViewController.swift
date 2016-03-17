@@ -65,7 +65,7 @@ class LoginViewController: UIViewController {
         ]
         
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
-        self.manager.request(.POST, "http://192.168.7.14:5000/login", parameters: parameters, encoding: .JSON).responseJSON { (response) -> Void in
+        self.manager.request(.POST, GlobalConstant.kAPI_Login, parameters: parameters, encoding: .JSON).responseJSON { (response) -> Void in
             guard let value = response.result.value else {
                 return
             }

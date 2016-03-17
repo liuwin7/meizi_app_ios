@@ -102,7 +102,24 @@ json格式
 441，用户名或密码不正确
 
 
-5、点赞
+5、点赞 /favorite
+【参数】
+json格式
+beauty_uuid: 图片的ID
+user_uuid: 用户的UUID
+【请求参数样例】
+{"beauty_uuid”:4,”user_uuid":"b22ba27a-eb1c-11e5-b3dc-0c4de9c7c925"}
+【请求方式】
+POST
+【返回】
+json格式
+【样例】
+{
+    "code": 0,
+    "desc": "Success"
+}
+【错误类型】（参看附录了解错误格式说明）
+451，点赞失败
 
 
 
