@@ -19,4 +19,7 @@ target :meinv do
     pod 'SnapKit'
     
     pod 'IQKeyboardManagerSwift'
+    
+    pod 'UMengAnalytics' #标准SDK，含IDFA
+
 end

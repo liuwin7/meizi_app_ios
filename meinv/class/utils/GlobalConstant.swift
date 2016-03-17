@@ -15,4 +15,6 @@ struct GlobalConstant {
     static let kAPI_Register = "\(kBaseURL)register"
     static let kAPI_Login = "\(kBaseURL)login"
     static let kAPI_Favorite = "\(kBaseURL)favorite"
+    
+    static let kUMeng_AppKey = "56ea299fe0f55a9c300003da"
 }

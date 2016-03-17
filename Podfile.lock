@@ -10,6 +10,7 @@ PODS:
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
   - SnapKit (0.19.1)
+  - UMengAnalytics (3.6.6)
 
 DEPENDENCIES:
   - Alamofire
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - pop
   - SDWebImage
   - SnapKit
+  - UMengAnalytics
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
@@ -32,7 +34,8 @@ SPEC CHECKSUMS:
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
+  UMengAnalytics: 4bf831415146b9c57cb10be65fbd43462ef8cf65
 
-PODFILE CHECKSUM: 4b7ba3f791978c10704ef51556971b358f985a5f
+PODFILE CHECKSUM: 950d208be83a2a773f848c7ab6251becb7751c61
 
 COCOAPODS: 1.0.0.beta.6
