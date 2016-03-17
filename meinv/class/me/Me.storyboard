@@ -13,9 +13,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="2pQ-o3-S2P">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快来分享一下你现在的心情吧！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppi-Yl-xRh">
+                                    <rect key="frame" x="8" y="113" width="584" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdS-G4-cfw">
+                                    <rect key="frame" x="270" y="45" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="guB-Nb-qbv"/>
+                                        <constraint firstAttribute="width" constant="60" id="jBd-bK-Nxz"/>
+                                    </constraints>
+                                    <state key="normal" image="user_profile_placeholder"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ppi-Yl-xRh" secondAttribute="trailing" constant="8" id="8kg-vX-Thk"/>
+                                <constraint firstAttribute="bottom" secondItem="ppi-Yl-xRh" secondAttribute="bottom" constant="15" id="DqI-ZX-K7k"/>
+                                <constraint firstItem="ppi-Yl-xRh" firstAttribute="top" secondItem="qdS-G4-cfw" secondAttribute="bottom" constant="8" id="a0x-I8-tCX"/>
+                                <constraint firstItem="ppi-Yl-xRh" firstAttribute="leading" secondItem="2pQ-o3-S2P" secondAttribute="leading" constant="8" id="rJK-4o-1mU"/>
+                                <constraint firstItem="qdS-G4-cfw" firstAttribute="centerX" secondItem="2pQ-o3-S2P" secondAttribute="centerX" id="uYF-Zk-2LH"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="me_cell_id" id="hlf-Xc-87w">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="173" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hlf-Xc-87w" id="VeR-iv-tNN">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -34,4 +62,7 @@
             <point key="canvasLocation" x="539" y="506"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="user_profile_placeholder" width="60" height="60"/>
+    </resources>
 </document>
