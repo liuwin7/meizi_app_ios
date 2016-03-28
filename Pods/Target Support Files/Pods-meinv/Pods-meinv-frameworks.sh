@@ -16,7 +16,7 @@ install_framework()
     local source="$1"
   fi
 
-  local destination="${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+  local destination="${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
 
   if [ -L "${source}" ]; then
       echo "Symlinked..."
@@ -84,24 +84,24 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Argo/Argo.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Curry/Curry.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DZNEmptyDataSet/DZNEmptyDataSet.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/pop/pop.framework"
+  install_framework "Pods-meinv/Alamofire.framework"
+  install_framework "Pods-meinv/Argo.framework"
+  install_framework "Pods-meinv/Curry.framework"
+  install_framework "Pods-meinv/DZNEmptyDataSet.framework"
+  install_framework "Pods-meinv/IQKeyboardManagerSwift.framework"
+  install_framework "Pods-meinv/MBProgressHUD.framework"
+  install_framework "Pods-meinv/SDWebImage.framework"
+  install_framework "Pods-meinv/SnapKit.framework"
+  install_framework "Pods-meinv/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Argo/Argo.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Curry/Curry.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DZNEmptyDataSet/DZNEmptyDataSet.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/pop/pop.framework"
+  install_framework "Pods-meinv/Alamofire.framework"
+  install_framework "Pods-meinv/Argo.framework"
+  install_framework "Pods-meinv/Curry.framework"
+  install_framework "Pods-meinv/DZNEmptyDataSet.framework"
+  install_framework "Pods-meinv/IQKeyboardManagerSwift.framework"
+  install_framework "Pods-meinv/MBProgressHUD.framework"
+  install_framework "Pods-meinv/SDWebImage.framework"
+  install_framework "Pods-meinv/SnapKit.framework"
+  install_framework "Pods-meinv/pop.framework"
 fi
